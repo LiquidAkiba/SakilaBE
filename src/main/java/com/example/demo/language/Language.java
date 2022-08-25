@@ -1,8 +1,6 @@
 package com.example.demo.language;
 
 
-import com.example.demo.film.Film;
-
 import javax.persistence.*;
 import java.util.Set;
 
