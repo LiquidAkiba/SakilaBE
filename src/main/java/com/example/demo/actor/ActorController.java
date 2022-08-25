@@ -1,8 +1,5 @@
 package com.example.demo.actor;
 
-
-import com.example.demo.category.Category;
-import com.example.demo.category.CategoryDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +25,7 @@ public class ActorController {
     @PostMapping("/Add_New_Actor")
     public @ResponseBody String addNewActor(@RequestParam String firstName, @RequestParam String lastName){
         Actor actor = new Actor(firstName, lastName);
-        System.out.println(firstName + " " + lastName);
+        logger.log(firstName + " " + lastName);
         actorRepository.save(actor);
         return "saved";
     }
