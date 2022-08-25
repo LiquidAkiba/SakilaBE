@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Tests {
 
     @Test
-    public void test_getFirstName(){
+    void test_getFirstName(){
 
         Actor testActor = new Actor();
         testActor.setFirstName("Gary");
@@ -17,13 +17,13 @@ public class Tests {
     }
 
     @Test
-    public void test_GetLastName(){
+    void test_GetLastName(){
         Actor testActor = new Actor();
         testActor.setLastName("Oldman");
         assertEquals("Oldman", testActor.getLastName(), "The name is not a match");
     }
 
-    public void test_GetCategoryName(){
+    void test_GetCategoryName(){
         Category testCategory = new Category();
         testCategory.setName("RomCom");
         assertEquals("RomCom", testCategory.getName(), "The category did not match");
