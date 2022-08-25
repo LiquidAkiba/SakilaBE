@@ -17,8 +17,6 @@
 		<java.version>17</java.version>
 		<sonar.organization>liquidakiba</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<cucumber.version>7.5.0</cucumber.version>
-		<sonar.coverage.jacoco.xmlReportPaths>../starAndShadow/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 
 	<dependencies>
