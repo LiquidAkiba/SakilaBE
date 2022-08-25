@@ -3,6 +3,7 @@ package com.example.demo.category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/Sakila")
 public class CategoryController {
