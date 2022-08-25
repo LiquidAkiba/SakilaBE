@@ -25,7 +25,7 @@ public class ActorController {
     @PostMapping("/Add_New_Actor")
     public @ResponseBody String addNewActor(@RequestParam String firstName, @RequestParam String lastName){
         Actor actor = new Actor(firstName, lastName);
-        logger.log(firstName + " " + lastName);
+        System.out.println(firstName + " " + lastName);
         actorRepository.save(actor);
         return "saved";
     }

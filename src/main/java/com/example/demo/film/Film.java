@@ -1,11 +1,8 @@
 package com.example.demo.film;
 
 import com.example.demo.filmActor.FilmActor;
-import org.springframework.web.bind.annotation.GetMapping;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Set;
 
 @Entity
@@ -15,7 +12,7 @@ public class Film {
     @Id
     @Column(name = "film_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int film_id;
+    private int filmID;
 
 
     @OneToMany(mappedBy = "film")
@@ -24,29 +21,29 @@ public class Film {
     //Attributes
     private String title;
     private String description;
-    private Integer release_year;
-    private Integer language_id;
-    private Integer original_language_id;
-    private Integer rental_duration;
-    private BigDecimal rental_rate;
+    private Integer releaseYear;
+    private Integer languageID;
+    private Integer originalLanguageID;
+    private Integer rentalDuration;
+    private BigDecimal rentalRate;
     private Integer length;
-    private BigDecimal replacement_cost;
+    private BigDecimal replacementCost;
     private String rating;
-    private String special_features;
+    private String specialFeatures;
     // private String last_update;
 
     public Film(String title, String description, Integer release_year, Integer language_id, Integer rental_duration,
                 BigDecimal rental_rate, Integer length, BigDecimal replacement_cost, String rating, String special_features) {
         this.title = title;
         this.description = description;
-        this.release_year = release_year;
-        this.language_id = language_id;
-        this.rental_duration = rental_duration;
-        this.rental_rate = rental_rate;
+        this.releaseYear = release_year;
+        this.languageID = language_id;
+        this.rentalDuration = rental_duration;
+        this.rentalRate = rental_rate;
         this.length = length;
-        this.replacement_cost = replacement_cost;
+        this.replacementCost = replacement_cost;
         this.rating = rating;
-        this.special_features = special_features;
+        this.specialFeatures = special_features;
 
     }
 
@@ -56,11 +53,11 @@ public class Film {
     }
 
     public int getFilm_id() {
-        return film_id;
+        return filmID;
     }
 
-    public void setFilm_id(int film_id) {
-        this.film_id = film_id;
+    public void setFilm_id(int filmid) {
+        this.filmID = filmid;
     }
 
     public String getTitle() {
@@ -80,35 +77,35 @@ public class Film {
     }
 
     public Integer getRelease_year() {
-        return release_year;
+        return releaseYear;
     }
 
-    public void setRelease_year(Integer release_year) {
-        this.release_year = release_year;
+    public void setReleaseYear(Integer release_year) {
+        this.releaseYear = release_year;
     }
 
     public Integer getLanguage_id() {
-        return language_id;
+        return languageID;
     }
 
     public void setOriginal_language_id(Integer original_language_id) {
-        this.original_language_id = original_language_id;
+        this.originalLanguageID = original_language_id;
     }
 
     public Integer getRental_duration() {
-        return rental_duration;
+        return rentalDuration;
     }
 
     public void setRental_duration(Integer rental_duration) {
-        this.rental_duration = rental_duration;
+        this.rentalDuration = rental_duration;
     }
 
     public BigDecimal getRental_rate() {
-        return rental_rate;
+        return rentalRate;
     }
 
     public void setRental_rate(BigDecimal rental_rate) {
-        this.rental_rate = rental_rate;
+        this.rentalRate = rental_rate;
     }
 
     public Integer getLength() {
@@ -120,11 +117,11 @@ public class Film {
     }
 
     public BigDecimal getReplacement_cost() {
-        return replacement_cost;
+        return replacementCost;
     }
 
     public void setReplacement_cost(BigDecimal replacement_cost) {
-        this.replacement_cost = replacement_cost;
+        this.replacementCost = replacement_cost;
     }
 
     public String getRating() {
@@ -136,11 +133,11 @@ public class Film {
     }
 
     public String getSpecial_features() {
-        return special_features;
+        return specialFeatures;
     }
 
     public void setSpecial_features(String special_features) {
-        this.special_features = special_features;
+        this.specialFeatures = special_features;
     }
 
 
