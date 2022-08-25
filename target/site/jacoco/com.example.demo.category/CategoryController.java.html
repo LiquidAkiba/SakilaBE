@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CategoryController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.example.demo.category</a> &gt; <span class="el_source">CategoryController.java</span></div><h1>CategoryController.java</h1><pre class="source lang-java linenums">package com.example.demo.category;
+
+import com.example.demo.actor.Actor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(&quot;/Sakila&quot;)
+public class CategoryController {
+
+    @Autowired
+    private final CategoryRepository categoryRepository;
+
+<span class="fc" id="L14">    public CategoryController(CategoryRepository categoryRepository){</span>
+<span class="fc" id="L15">        this.categoryRepository = categoryRepository;</span>
+<span class="fc" id="L16">    }</span>
+
+    @GetMapping(&quot;/All_Categories&quot;)
+    public @ResponseBody
+    Iterable&lt;Category&gt;getAllCategories(){
+<span class="nc" id="L21">        return categoryRepository.findAll();</span>
+    }
+
+    //Stops server running
+    @PostMapping(&quot;/Add_New_Category&quot;)
+    public @ResponseBody String addNewCategory(@RequestParam String name){
+<span class="nc" id="L27">        Category category = new Category(name);</span>
+<span class="nc" id="L28">        categoryRepository.save(category);</span>
+<span class="nc" id="L29">        return &quot;saved&quot;;</span>
+    }
+
+    @GetMapping(&quot;/Get_Category_By_Name&quot;)
+    public @ResponseBody
+    Iterable&lt;Category&gt;getCatByName(@RequestParam String name) {
+<span class="nc" id="L35">        return categoryRepository.getCatByName(name);</span>
+    }
+
+    // Retrieve the category by id
+    @GetMapping(&quot;/Get_Category_By_Id&quot;)
+    public @ResponseBody
+    Category getCatById(@RequestParam int catId) {
+<span class="nc" id="L42">        return categoryRepository.getCatById(catId);</span>
+    }
+
+    // Edit the category by id
+    @PatchMapping(&quot;/Edit_Category_By_Id&quot;)
+    public @ResponseBody
+    void editCatById(@RequestParam int catId, @RequestBody CategoryDTO data) {
+
+<span class="nc" id="L50">        Category existingCategory = categoryRepository.getCatById(catId);</span>
+
+<span class="nc" id="L52">        existingCategory.setName(data.getName());</span>
+<span class="nc" id="L53">        categoryRepository.save(existingCategory);</span>
+<span class="nc" id="L54">    }</span>
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

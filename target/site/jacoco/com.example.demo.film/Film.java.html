@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Film.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.example.demo.film</a> &gt; <span class="el_source">Film.java</span></div><h1>Film.java</h1><pre class="source lang-java linenums">package com.example.demo.film;
+
+import com.example.demo.filmActor.FilmActor;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import javax.persistence.*;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Set;
+
+@Entity
+@Table(name=&quot;film&quot;)
+public class Film {
+
+    @Id
+    @Column(name = &quot;film_id&quot;)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int film_id;
+
+
+    @OneToMany(mappedBy = &quot;film&quot;)
+    Set&lt;FilmActor&gt; filmsActors;
+
+    //Attributes
+    private String title;
+    private String description;
+    private Integer release_year;
+    private Integer language_id;
+    private Integer original_language_id;
+    private Integer rental_duration;
+    private BigDecimal rental_rate;
+    private Integer length;
+    private BigDecimal replacement_cost;
+    private String rating;
+    private String special_features;
+    // private String last_update;
+
+    public Film(String title, String description, Integer release_year, Integer language_id, Integer rental_duration,
+<span class="nc" id="L39">                BigDecimal rental_rate, Integer length, BigDecimal replacement_cost, String rating, String special_features) {</span>
+<span class="nc" id="L40">        this.title = title;</span>
+<span class="nc" id="L41">        this.description = description;</span>
+<span class="nc" id="L42">        this.release_year = release_year;</span>
+<span class="nc" id="L43">        this.language_id = language_id;</span>
+<span class="nc" id="L44">        this.rental_duration = rental_duration;</span>
+<span class="nc" id="L45">        this.rental_rate = rental_rate;</span>
+<span class="nc" id="L46">        this.length = length;</span>
+<span class="nc" id="L47">        this.replacement_cost = replacement_cost;</span>
+<span class="nc" id="L48">        this.rating = rating;</span>
+<span class="nc" id="L49">        this.special_features = special_features;</span>
+
+<span class="nc" id="L51">    }</span>
+
+
+    //Empty Constructor
+<span class="fc" id="L55">    public Film() {</span>
+<span class="fc" id="L56">    }</span>
+
+    public int getFilm_id() {
+<span class="nc" id="L59">        return film_id;</span>
+    }
+
+    public void setFilm_id(int film_id) {
+<span class="nc" id="L63">        this.film_id = film_id;</span>
+<span class="nc" id="L64">    }</span>
+
+    public String getTitle() {
+<span class="nc" id="L67">        return title;</span>
+    }
+
+    public void setTitle(String title) {
+<span class="nc" id="L71">        this.title = title;</span>
+<span class="nc" id="L72">    }</span>
+
+    public String getDescription() {
+<span class="nc" id="L75">        return description;</span>
+    }
+
+    public void setDescription(String description) {
+<span class="nc" id="L79">        this.description = description;</span>
+<span class="nc" id="L80">    }</span>
+
+    public Integer getRelease_year() {
+<span class="nc" id="L83">        return release_year;</span>
+    }
+
+    public void setRelease_year(Integer release_year) {
+<span class="nc" id="L87">        this.release_year = release_year;</span>
+<span class="nc" id="L88">    }</span>
+
+    public Integer getLanguage_id() {
+<span class="nc" id="L91">        return language_id;</span>
+    }
+
+    public void setOriginal_language_id(Integer original_language_id) {
+<span class="nc" id="L95">        this.original_language_id = original_language_id;</span>
+<span class="nc" id="L96">    }</span>
+
+    public Integer getRental_duration() {
+<span class="nc" id="L99">        return rental_duration;</span>
+    }
+
+    public void setRental_duration(Integer rental_duration) {
+<span class="nc" id="L103">        this.rental_duration = rental_duration;</span>
+<span class="nc" id="L104">    }</span>
+
+    public BigDecimal getRental_rate() {
+<span class="nc" id="L107">        return rental_rate;</span>
+    }
+
+    public void setRental_rate(BigDecimal rental_rate) {
+<span class="nc" id="L111">        this.rental_rate = rental_rate;</span>
+<span class="nc" id="L112">    }</span>
+
+    public Integer getLength() {
+<span class="nc" id="L115">        return length;</span>
+    }
+
+    public void setLength(Integer length) {
+<span class="nc" id="L119">        this.length = length;</span>
+<span class="nc" id="L120">    }</span>
+
+    public BigDecimal getReplacement_cost() {
+<span class="nc" id="L123">        return replacement_cost;</span>
+    }
+
+    public void setReplacement_cost(BigDecimal replacement_cost) {
+<span class="nc" id="L127">        this.replacement_cost = replacement_cost;</span>
+<span class="nc" id="L128">    }</span>
+
+    public String getRating() {
+<span class="nc" id="L131">        return rating;</span>
+    }
+
+    public void setRating(String rating) {
+<span class="nc" id="L135">        this.rating = rating;</span>
+<span class="nc" id="L136">    }</span>
+
+    public String getSpecial_features() {
+<span class="nc" id="L139">        return special_features;</span>
+    }
+
+    public void setSpecial_features(String special_features) {
+<span class="nc" id="L143">        this.special_features = special_features;</span>
+<span class="nc" id="L144">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ActorController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.example.demo.actor</a> &gt; <span class="el_source">ActorController.java</span></div><h1>ActorController.java</h1><pre class="source lang-java linenums">package com.example.demo.actor;
+
+
+import com.example.demo.category.Category;
+import com.example.demo.category.CategoryDTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController //Search for all packages below Spring Sakila, Looks for Rest Controllers
+@RequestMapping(&quot;/Sakila&quot;)
+public class ActorController {
+
+    @Autowired  //Creates actor repository implementation
+    private final ActorRepository actorRepository;
+
+<span class="fc" id="L16">    public ActorController(ActorRepository actorRepository) {</span>
+<span class="fc" id="L17">        this.actorRepository = actorRepository;</span>
+<span class="fc" id="L18">    }</span>
+
+    //Get request / read function
+    @GetMapping(&quot;/All_Actors&quot;)
+    public @ResponseBody
+    Iterable&lt;Actor&gt;getAllActors(){
+<span class="nc" id="L24">        return actorRepository.findAll();</span>
+    }
+
+    //@ResponseBody
+    @PostMapping(&quot;/Add_New_Actor&quot;)
+    public @ResponseBody String addNewActor(@RequestParam String firstName, @RequestParam String lastName){
+<span class="nc" id="L30">        Actor actor = new Actor(firstName, lastName);</span>
+<span class="nc" id="L31">        System.out.println(firstName + &quot; &quot; + lastName);</span>
+<span class="nc" id="L32">        actorRepository.save(actor);</span>
+<span class="nc" id="L33">        return &quot;saved&quot;;</span>
+    }
+
+    @GetMapping(&quot;/Get_Actor_By_First_Name&quot;)
+    public @ResponseBody
+    Iterable&lt;Actor&gt;getActorByFirstName(@RequestParam String firstName) {
+<span class="nc" id="L39">        return actorRepository.findByFirstName(firstName);</span>
+    }
+
+    @GetMapping(&quot;/Get_Actor_By_Id&quot;)
+    public @ResponseBody
+    Actor getActorById(@RequestParam int actorId) {
+<span class="nc" id="L45">        return actorRepository.getActorById(actorId);</span>
+    }
+
+    // Update/edit actor by id
+    @PatchMapping(&quot;/Edit_Actor_By_Id&quot;)
+    public @ResponseBody
+    void editActorById(@RequestParam int actorId, @RequestBody ActorDTO data) {
+
+<span class="nc" id="L53">        Actor existingActor = actorRepository.getActorById(actorId);</span>
+
+<span class="nc" id="L55">        existingActor.setFirstName(data.getFirstName());</span>
+<span class="nc" id="L56">        existingActor.setLastName(data.getLastName());</span>
+
+<span class="nc" id="L58">        actorRepository.save(existingActor);</span>
+<span class="nc" id="L59">    }</span>
+
+    @DeleteMapping(&quot;/Delete_Actor_By_Id&quot;)
+    public @ResponseBody
+    void deleteActorById(@RequestParam int actorId){
+<span class="nc" id="L64">        actorRepository.deleteById(actorId);</span>
+<span class="nc" id="L65">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
