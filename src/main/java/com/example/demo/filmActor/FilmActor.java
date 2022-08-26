@@ -24,23 +24,8 @@ public class FilmActor {
     Actor actor;
 
 
-    public FilmActor(Film film, Actor actor){
-        this.film = film;
-        this.actor = actor;
-        id = new FilmActorKey( film.getFilm_id(), actor.getId());
-    }
-
-    public FilmActor(){
+    public FilmActor() {
 
     }
-
-    public FilmActorKey getId() {
-        return id;
-    }
-
-    public void setId(FilmActorKey id) {
-        this.id = id;
-    }
-
-
 }
+
