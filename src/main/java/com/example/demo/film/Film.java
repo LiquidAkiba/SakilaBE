@@ -56,8 +56,8 @@ public class Film {
         return releaseYear;
     }
 
-    public void setReleaseYear(Integer releaseYear) {
-        this.releaseYear = releaseYear;
+    public void setRelease_year(Integer release_year) {
+        this.releaseYear = release_year;
     }
 
 
@@ -65,7 +65,7 @@ public class Film {
         return releaseYear;
     }
 
-    public void setReleaseyear(Integer release_year) {
+    public void setReleaseYear(Integer release_year) {
         this.releaseYear = release_year;
     }
 
