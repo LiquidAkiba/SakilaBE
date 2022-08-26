@@ -29,8 +29,6 @@ public class Film {
     private String rating;
 
     //Empty Constructor
-    public Film() {
-    }
 
     public int getFilm_id() {
         return filmID;
