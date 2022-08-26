@@ -16,7 +16,6 @@ public class Film {
 
     //Attributes
     private String title;
-    private Integer releaseYear;
     private Integer rentalDuration;
     private BigDecimal rentalRate;
     private Integer length;
@@ -41,21 +40,6 @@ public class Film {
         this.title = title;
     }
 
-   public Integer getRelease_year() {
-        return releaseYear;
-    }
-
-    public void setReleaseYear(Integer release_year) {
-        this.releaseYear = release_year;
-    }
-
-    public Integer getRental_duration() {
-        return rentalDuration;
-    }
-
-    public void setRental_duration(Integer rental_duration) {
-        this.rentalDuration = rental_duration;
-    }
 
     public BigDecimal getRental_rate() {
         return rentalRate;

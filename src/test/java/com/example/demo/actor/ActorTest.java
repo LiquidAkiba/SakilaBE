@@ -16,6 +16,9 @@ class ActorTest {
 
     @Test
     void setId() {
+        Actor testActor = new Actor();
+        testActor.setId(12);
+        assertEquals(12, testActor.getId());
     }
 
     @Test
