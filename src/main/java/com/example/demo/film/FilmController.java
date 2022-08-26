@@ -1,8 +1,5 @@
 package com.example.demo.film;
 
-
-import com.example.demo.film.Film;
-import com.example.demo.film.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

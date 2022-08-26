@@ -8,6 +8,10 @@ class ActorTest {
 
     @Test
     void getId() {
+
+        Actor testActor = new Actor();
+        testActor.setId = (12);
+        assertEquals(12, testActor.getId());
     }
 
     @Test
