@@ -16,7 +16,7 @@ public class Film {
 
     //Attributes
     private String title;
-    private BigDecimal rentalRate;
+    private double rentalRate;
     private Integer length;
     private double replacementCost;
     private String rating;
@@ -40,11 +40,11 @@ public class Film {
     }
 
 
-    public BigDecimal getRentalRate() {
+    public double getRentalRate() {
         return rentalRate;
     }
 
-    public void setRentalRate(BigDecimal rentalrate) {
+    public void setRentalRate(double rentalrate) {
         this.rentalRate = rentalrate;
     }
 
