@@ -1,6 +1,5 @@
 package com.example.demo.actor;
 
-import com.example.demo.filmActor.FilmActor;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -21,8 +20,8 @@ public class Actor {
     private String lastName;
 
     //FilmActor relationship
-    @OneToMany(mappedBy = "actor")
-    private Set<FilmActor> actorsFilms;
+    //@OneToMany(mappedBy = "actor")
+    //private Set<FilmActor> actorsFilms;
 
     public Actor(String firstName, String lastName){
         this.firstName=firstName;

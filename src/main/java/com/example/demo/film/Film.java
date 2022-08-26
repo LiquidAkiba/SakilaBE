@@ -1,6 +1,5 @@
 package com.example.demo.film;
 
-import com.example.demo.filmActor.FilmActor;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Set;
@@ -15,8 +14,8 @@ public class Film {
     private int filmID;
 
 
-    @OneToMany(mappedBy = "film")
-    Set<FilmActor> filmsActors;
+    //@OneToMany(mappedBy = "film")
+    //Set<FilmActor> filmsActors;
 
     //Attributes
     private String title;
