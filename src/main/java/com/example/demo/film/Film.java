@@ -22,25 +22,20 @@ public class Film {
     private String title;
     private String description;
     private Integer releaseYear;
-    private Integer languageID;
     private Integer rentalDuration;
     private BigDecimal rentalRate;
     private Integer length;
     private BigDecimal replacementCost;
     private String rating;
-    private String specialFeatures;
     public Film(String title, String description, Integer release_year, Integer language_id, Integer rental_duration,
                 BigDecimal rental_rate, Integer length, BigDecimal replacement_cost, String rating, String special_features) {
         this.title = title;
         this.description = description;
         this.releaseYear = release_year;
-        this.languageID = language_id;
         this.rentalDuration = rental_duration;
         this.rentalRate = rental_rate;
         this.length = length;
-        this.replacementCost = replacement_cost;
         this.rating = rating;
-        this.specialFeatures = special_features;
 
     }
 
@@ -79,10 +74,6 @@ public class Film {
 
     public void setReleaseYear(Integer release_year) {
         this.releaseYear = release_year;
-    }
-
-    public Integer getLanguage_id() {
-        return languageID;
     }
 
     public Integer getRental_duration() {
@@ -125,13 +116,5 @@ public class Film {
         this.rating = rating;
     }
 
-    public String getSpecial_features() {
-        return specialFeatures;
-    }
-
-    public void setSpecial_features(String special_features) {
-        this.specialFeatures = special_features;
-    }
-
-
+    
 }
