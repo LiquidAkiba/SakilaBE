@@ -31,8 +31,25 @@ class FilmTest {
 
     @Test
     void setTitle() {
+        Film testRating = new Film();
+        testRating.setTitle("Rush");
+        assertEquals("Rush", testRating.getTitle());
     }
 
+    @Test
+    void getReplacementCost(){
+        Film testRating = new Film();
+        testRating.setReplacementCost(20.99);
+        assertEquals(20.99, testRating.getReplacementCost());
+    }
+
+    @Test
+    void setReplacementCost(){
+        Film testRating = new Film();
+        testRating.setReplacementCost(20.99);
+        assertEquals(20.99, testRating.getReplacementCost());
+
+    }
 
     @Test
     void getRental_duration() {

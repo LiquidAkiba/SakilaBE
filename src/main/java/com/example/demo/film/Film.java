@@ -18,7 +18,7 @@ public class Film {
     private String title;
     private BigDecimal rentalRate;
     private Integer length;
-    private BigDecimal replacementCost;
+    private double replacementCost;
     private String rating;
 
     //Empty Constructor
@@ -56,11 +56,11 @@ public class Film {
         this.length = length;
     }
 
-    public BigDecimal getReplacementCost() {
+    public double getReplacementCost() {
         return replacementCost;
     }
 
-    public void setReplacementCost(BigDecimal replacementCost) {
+    public void setReplacementCost(double replacementCost) {
         this.replacementCost = replacementCost;
     }
 
