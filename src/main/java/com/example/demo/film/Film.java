@@ -60,7 +60,7 @@ public class Film {
         return replacementCost;
     }
 
-    public void setReplacement_cost(BigDecimal replacementCost) {
+    public void setReplacementCost(BigDecimal replacementCost) {
         this.replacementCost = replacementCost;
     }
 
