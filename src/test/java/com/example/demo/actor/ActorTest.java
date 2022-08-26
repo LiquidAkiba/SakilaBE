@@ -31,6 +31,9 @@ class ActorTest {
 
     @Test
     void setFirstName() {
+        Actor testActor = new Actor();
+        testActor.setFirstName("Gary");
+        assertEquals("Gary", testActor.getFirstName());
     }
 
     @Test
@@ -42,5 +45,8 @@ class ActorTest {
 
     @Test
     void setLastName() {
+        Actor testActor = new Actor();
+        testActor.setLastName("Oldman");
+        assertEquals("Oldman", testActor.getLastName(), "The name is not a match");
     }
 }
