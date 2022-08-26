@@ -20,7 +20,6 @@ public class Film {
 
     //Attributes
     private String title;
-    private String description;
     private Integer releaseYear;
     private Integer rentalDuration;
     private BigDecimal rentalRate;
@@ -30,11 +29,11 @@ public class Film {
 
     //Empty Constructor
 
-    public int getFilm_id() {
+    public int getFilmID() {
         return filmID;
     }
 
-    public void setFilm_id(int filmid) {
+    public void setFilmID(int filmid) {
         this.filmID = filmid;
     }
 
@@ -46,7 +45,7 @@ public class Film {
         this.title = title;
     }
 
-   public Integer getRelease_year() {
+   public Integer getReleaseYear() {
         return releaseYear;
     }
 
