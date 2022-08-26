@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FilmTest {
 
+
     @Test
     void getTitle() {
         Film testRating = new Film();
@@ -18,30 +19,8 @@ class FilmTest {
     void setTitle() {
     }
 
-    @Test
-    void getDescription() {
-
-        Film testRating = new Film();
-        testRating.setDescription("Forumla 1 Movie");
-        assertEquals("Forumla 1 Movie", testRating.getDescription());
-    }
 
     @Test
-    void setDescription() {
-    }
-
-    @Test
-    void getRelease_year() {
-        Film testRating = new Film();
-        testRating.setRelease_year(2020);
-        assertEquals(2020, testRating.getRelease_year());
-    }
-
-    @Test
-    void setReleaseYear() {
-    }
-
-   @Test
     void getRental_duration() {
     }
 
