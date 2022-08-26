@@ -2,7 +2,7 @@ package com.example.demo.film;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Set;
+
 
 @Entity
 @Table(name="film")
@@ -14,8 +14,6 @@ public class Film {
     private int filmID;
 
 
-    //@OneToMany(mappedBy = "film")
-    //Set<FilmActor> filmsActors;
 
     //Attributes
     private String title;
@@ -58,8 +56,8 @@ public class Film {
         return releaseYear;
     }
 
-    public void setRelease_year(Integer release_year) {
-        this.releaseYear = release_year;
+    public void setReleaseYear(Integer releaseYear) {
+        this.releaseYear = releaseYear;
     }
 
 
@@ -67,7 +65,7 @@ public class Film {
         return releaseYear;
     }
 
-    public void setReleaseYear(Integer release_year) {
+    public void setReleaseyear(Integer release_year) {
         this.releaseYear = release_year;
     }
 
