@@ -51,20 +51,20 @@ class FilmTest {
 
     }
 
-    @Test
-    void getRental_duration() {
-    }
 
-    @Test
-    void setRental_duration() {
-    }
 
     @Test
     void getRental_rate() {
+        Film testRating = new Film();
+        testRating.setRentalRate(0.99);
+        assertEquals(0.99, testRating.getRentalRate());
     }
 
     @Test
     void setRental_rate() {
+        Film testRating = new Film();
+        testRating.setRentalRate(0.99);
+        assertEquals(0.99, testRating.getRentalRate());
     }
 
     @Test
