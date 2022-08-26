@@ -8,6 +8,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class FilmTest {
 
     @Test
+    void getFilmID() {
+
+        Film testFilm = new Film();
+        testFilm.setFilmID(12);
+        assertEquals(12, testFilm.getFilmID());
+    }
+
+    @Test
+    void setFilmID() {
+        Film testFilm = new Film();
+        testFilm.setFilmID(1);
+        assertEquals(1, testFilm.getFilmID());
+    }
+
+    @Test
     void getTitle() {
         Film testRating = new Film();
         testRating.setTitle("Rush");
