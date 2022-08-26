@@ -44,8 +44,8 @@ public class Film {
         return rentalRate;
     }
 
-    public void setRentalRate(BigDecimal rental_rate) {
-        this.rentalRate = rental_rate;
+    public void setRentalRate(BigDecimal rentalrate) {
+        this.rentalRate = rentalrate;
     }
 
     public Integer getLength() {
@@ -60,8 +60,8 @@ public class Film {
         return replacementCost;
     }
 
-    public void setReplacement_cost(BigDecimal replacement_cost) {
-        this.replacementCost = replacement_cost;
+    public void setReplacement_cost(BigDecimal replacementCost) {
+        this.replacementCost = replacementCost;
     }
 
     public String getRating() {

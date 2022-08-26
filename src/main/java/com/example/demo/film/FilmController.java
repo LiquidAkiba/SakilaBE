@@ -3,8 +3,6 @@ package com.example.demo.film;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
-
 @CrossOrigin("http://localhost:3306")
 @RestController //Search for all packages below Spring Sakila, Looks for Rest Controllers
 @RequestMapping("/Sakila")
