@@ -3,7 +3,7 @@ package com.example.demo.actor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins="*")
+@CrossOrigin("http://localhost:3306")
 @RestController //Search for all packages below Spring Sakila, Looks for Rest Controllers
 @RequestMapping("/Sakila")
 public class ActorController {

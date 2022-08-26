@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 
-@CrossOrigin(origins="*")
-
+@CrossOrigin("http://localhost:3306")
 @RestController //Search for all packages below Spring Sakila, Looks for Rest Controllers
 @RequestMapping("/Sakila")
 public class FilmController {
