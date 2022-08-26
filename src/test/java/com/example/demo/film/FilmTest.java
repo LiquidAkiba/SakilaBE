@@ -1,18 +1,11 @@
 package com.example.demo.film;
 
+import com.example.demo.actor.Actor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class FilmTest {
-
-    @Test
-    void getFilm_id() {
-    }
-
-    @Test
-    void setFilm_id() {
-    }
 
     @Test
     void getTitle() {

@@ -46,15 +46,7 @@ public class Film {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Integer getRelease_year() {
+   public Integer getRelease_year() {
         return releaseYear;
     }
 
