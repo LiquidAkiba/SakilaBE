@@ -27,6 +27,8 @@ public class Film {
     private BigDecimal replacementCost;
     private String rating;
 
+    private String description;
+
     //Empty Constructor
 
     public int getFilmID() {
@@ -45,7 +47,24 @@ public class Film {
         this.title = title;
     }
 
-   public Integer getReleaseYear() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getRelease_year() {
+        return releaseYear;
+    }
+
+    public void setRelease_year(Integer release_year) {
+        this.releaseYear = release_year;
+    }
+
+
+    public Integer getReleaseYear() {
         return releaseYear;
     }
 

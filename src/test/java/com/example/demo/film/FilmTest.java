@@ -9,6 +9,9 @@ class FilmTest {
 
     @Test
     void getTitle() {
+        Film testRating = new Film();
+        testRating.setTitle("Rush");
+        assertEquals("Rush", testRating.getTitle());
     }
 
     @Test
@@ -17,6 +20,10 @@ class FilmTest {
 
     @Test
     void getDescription() {
+
+        Film testRating = new Film();
+        testRating.setDescription("Forumla 1 Movie");
+        assertEquals("Forumla 1 Movie", testRating.getDescription());
     }
 
     @Test
@@ -25,21 +32,16 @@ class FilmTest {
 
     @Test
     void getRelease_year() {
+        Film testRating = new Film();
+        testRating.setRelease_year(2020);
+        assertEquals(2020, testRating.getRelease_year());
     }
 
     @Test
     void setReleaseYear() {
     }
 
-    @Test
-    void getLanguage_id() {
-    }
-
-    @Test
-    void setOriginal_language_id() {
-    }
-
-    @Test
+   @Test
     void getRental_duration() {
     }
 
@@ -58,20 +60,15 @@ class FilmTest {
     @Test
     void getLength() {
         Film testLength  = new Film();
-        testLength.setLength(69);
-        assertEquals(69, testLength.getLength());
+        testLength.setLength(129);
+        assertEquals(129, testLength.getLength());
     }
 
     @Test
     void setLength() {
-    }
-
-    @Test
-    void getReplacement_cost() {
-    }
-
-    @Test
-    void setReplacement_cost() {
+        Film testLength  = new Film();
+        testLength.setLength(129);
+        assertEquals(129, testLength.getLength());
     }
 
     @Test
