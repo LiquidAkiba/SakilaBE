@@ -27,8 +27,8 @@ public class Film {
     private Integer length;
     private BigDecimal replacementCost;
     private String rating;
-    public Film(String title, String description, Integer release_year, Integer language_id, Integer rental_duration,
-                BigDecimal rental_rate, Integer length, BigDecimal replacement_cost, String rating, String special_features) {
+    public Film(String title, String description, Integer release_year,  Integer rental_duration,
+                BigDecimal rental_rate, Integer length, String rating) {
         this.title = title;
         this.description = description;
         this.releaseYear = release_year;
