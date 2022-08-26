@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FilmTest {
 
-
     @Test
     void getTitle() {
         Film testRating = new Film();

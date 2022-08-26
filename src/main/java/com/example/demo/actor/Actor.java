@@ -17,8 +17,6 @@ public class Actor {
     @Column(name="last_name")
     private String lastName;
 
-    //FilmActor relationship
-
 
     public Actor(String firstName, String lastName){
         this.firstName=firstName;
