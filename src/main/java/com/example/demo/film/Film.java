@@ -16,7 +16,6 @@ public class Film {
 
     //Attributes
     private String title;
-    private Integer rentalDuration;
     private BigDecimal rentalRate;
     private Integer length;
     private BigDecimal replacementCost;
@@ -24,11 +23,11 @@ public class Film {
 
     //Empty Constructor
 
-    public int getFilm_id() {
+    public int getFilmID() {
         return filmID;
     }
 
-    public void setFilm_id(int filmid) {
+    public void setFilmID(int filmid) {
         this.filmID = filmid;
     }
 
@@ -41,11 +40,11 @@ public class Film {
     }
 
 
-    public BigDecimal getRental_rate() {
+    public BigDecimal getRentalRate() {
         return rentalRate;
     }
 
-    public void setRental_rate(BigDecimal rental_rate) {
+    public void setRentalRate(BigDecimal rental_rate) {
         this.rentalRate = rental_rate;
     }
 
@@ -57,7 +56,7 @@ public class Film {
         this.length = length;
     }
 
-    public BigDecimal getReplacement_cost() {
+    public BigDecimal getReplacementCost() {
         return replacementCost;
     }
 
